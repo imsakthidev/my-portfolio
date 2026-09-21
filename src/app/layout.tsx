@@ -431,7 +431,10 @@ const jsonLd = {
     "AI-focused software developer",
     "AI developer",
     "AI software engineer"
-],
+  ],
+  verification: {
+    google: 'Al0th2ZA8M6PKZHrUDc8cDJFbbR6lrI0wxS3iy0DP4c',
+  },
 };
 
 export default function RootLayout({

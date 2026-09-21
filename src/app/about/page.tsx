@@ -26,8 +26,8 @@ export default function About() {
               <a href={`mailto:${about.email}`} style={{ color: 'var(--accent-primary)', textDecoration: 'none' }}>{about.email}</a>
             </div>
             <div>
-              <span style={{ color: 'var(--text-muted)', fontSize: '0.85rem', display: 'block' }}>Education</span>
-              <strong style={{ color: 'var(--text-primary)' }}>{education.degree}</strong>
+              <span style={{ color: 'var(--text-muted)', fontSize: '0.85rem', display: 'block' }}>Phone</span>
+              <a href={`tel:${about.phone}`} style={{ color: 'var(--accent-primary)', textDecoration: 'none' }}>{about.phone}</a>
             </div>
           </div>
         </div>

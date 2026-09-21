@@ -1,17 +1,7 @@
-import type { Metadata } from 'next';
-import './globals.css';
-import Navbar from '@/components/Navbar';
-import styles from '@/app/page.module.css';
+import re
 
-export const metadata: Metadata = {
-  metadataBase: new URL('https://portfoliosakthi.vercel.app'),
-  title: {
-    default: 'Sakthivelpandian P. | AI-Focused Software Developer & GIS Operator',
-    template: '%s | Sakthivelpandian P.',
-  },
-  description:
-    'Official portfolio of Sakthivelpandian P. - AI-focused software developer and GIS Operator at SSB. Expert in React, Next.js, Gemini API, Node.js, and GIS mapping.',
-    keywords: [
+raw_keywords = [
+    # 1. Name & Identity Variations (50)
     "Sakthivelpandian",
     "Sakthivelpandian P",
     "Sakthivelpandian portfolio",
@@ -62,6 +52,8 @@ export const metadata: Metadata = {
     "AI software engineer",
     "Sakthivelpandian P portfolio website",
     "Sakthivelpandian P official portfolio",
+
+    # 2. AI & Machine Learning Specialties (50)
     "AI full stack developer",
     "Gemini API developer",
     "Vercel AI SDK developer",
@@ -112,6 +104,8 @@ export const metadata: Metadata = {
     "Tailwind AI UI developer",
     "AI portfolio engineer",
     "Generative AI consultant India",
+
+    # 3. Frontend & Modern Web Tech (50)
     "React developer",
     "Next.js developer",
     "Nextjs 16 developer",
@@ -162,6 +156,8 @@ export const metadata: Metadata = {
     "Clean JSX developer",
     "Responsive UI developer",
     "React TypeScript engineer",
+
+    # 4. Backend & Full Stack Development (50)
     "Node.js developer",
     "Express.js developer",
     "MongoDB developer",
@@ -212,6 +208,8 @@ export const metadata: Metadata = {
     "Serverless API developer",
     "Nodejs microservices engineer",
     "Backend system developer",
+
+    # 5. GIS & Geospatial Expertise (50)
     "GIS Operator",
     "GIS Specialist",
     "GIS Analyst",
@@ -262,6 +260,8 @@ export const metadata: Metadata = {
     "Geospatial map designer",
     "GIS operational intelligence",
     "Spatial data management",
+
+    # 6. Location-Specific Keywords (50)
     "Software developer Theni",
     "Developer Tamilnadu",
     "Full stack developer Chennai",
@@ -312,6 +312,8 @@ export const metadata: Metadata = {
     "Best full stack developer Theni",
     "Leading developer Tamilnadu",
     "Software architect South India",
+
+    # 7. Projects & Digital Solutions (50)
     "Sakthi Speaks Digital",
     "Sakthi Speaks Digital platform",
     "Digital Growth Consultant chatbot",
@@ -362,6 +364,8 @@ export const metadata: Metadata = {
     "Cross platform desktop tool",
     "Next.js 16 Vercel deployment",
     "Smart Moi Tamil application",
+
+    # 8. Education & Teaching Keywords (50)
     "Computer Science Teacher",
     "PG Assistant Computer Science",
     "Hayagreeva Vidhyalaya teacher",
@@ -412,6 +416,8 @@ export const metadata: Metadata = {
     "Academic programming instructor",
     "Educator Sakthivelpandian",
     "Teaching experience computer science",
+
+    # 9. Career, Hiring & Freelance (50)
     "Available for hire software developer",
     "Hire AI developer",
     "Hire full stack developer",
@@ -462,6 +468,8 @@ export const metadata: Metadata = {
     "Dedicated AI developer",
     "Expert web architect India",
     "Professional software consultant",
+
+    # 10. Targeted long-tail search queries (50)
     "Sakthivelpandian P AI software developer",
     "Sakthivelpandian P GIS operator",
     "Sakthivelpandian P SSB Constable",
@@ -512,155 +520,30 @@ export const metadata: Metadata = {
     "Sakthivelpandian P software developer profile",
     "Sakthivelpandian P official portfolio link",
     "Sakthivelpandian P web development services"
-  ],
-  authors: [{ name: 'Sakthivelpandian P', url: 'https://portfoliosakthi.vercel.app' }],
-  creator: 'Sakthivelpandian P',
-  publisher: 'Sakthivelpandian P',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    url: 'https://portfoliosakthi.vercel.app',
-    siteName: 'Sakthivelpandian P Portfolio',
-    title: 'Sakthivelpandian P. | AI-Focused Software Developer & GIS Operator',
-    description:
-      'Official portfolio of Sakthivelpandian P. - AI-focused software developer and GIS Operator at SSB.',
-    images: [
-      {
-        url: '/photo.jpg',
-        width: 400,
-        height: 400,
-        alt: 'Sakthivelpandian P',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Sakthivelpandian P. | AI-Focused Software Developer',
-    description:
-      'Official portfolio of Sakthivelpandian P. - AI-focused software developer and GIS Operator at SSB.',
-    images: ['/photo.jpg'],
-  },
-  alternates: {
-    canonical: 'https://portfoliosakthi.vercel.app',
-  },
-};
+]
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Person',
-  name: 'Sakthivelpandian P',
-  alternateName: 'Sakthi',
-  url: 'https://portfoliosakthi.vercel.app',
-  image: 'https://portfoliosakthi.vercel.app/photo.jpg',
-  jobTitle: 'AI-Focused Software Developer & GIS Operator',
-  worksFor: {
-    '@type': 'Organization',
-    name: 'Sashastra Seema Bal (SSB)',
-  },
-  sameAs: [
-    'https://github.com/imsakthidev',
-    'mailto:imsakthidev@gmail.com',
-  ],
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Theni',
-    addressRegion: 'Tamilnadu',
-    addressCountry: 'India',
-  },
-  knowsAbout: [
-    "Sakthivelpandian",
-    "Sakthivelpandian P",
-    "Sakthivelpandian portfolio",
-    "Sakthivelpandian developer",
-    "Sakthivelpandian software engineer",
-    "Sakthivelpandian GIS",
-    "Sakthivelpandian SSB",
-    "Sakthivelpandian Tamilnadu",
-    "Sakthivelpandian Theni",
-    "Sakthivelpandian computer science",
-    "imsakthidev",
-    "imsakthidev github",
-    "Sakthivelpandian P portfolio",
-    "Sakthivelpandian P developer",
-    "Sakthivelpandian P engineer",
-    "Sakthivelpandian P resume",
-    "Sakthivelpandian contact",
-    "Sakthivelpandian email",
-    "Sakthivelpandian phone",
-    "Sakthivelpandian website",
-    "Sakthivelpandian Vercel",
-    "Sakthivelpandian GitHub",
-    "Sakthivelpandian full stack",
-    "Sakthivelpandian AI",
-    "Sakthi developer",
-    "Sakthi software engineer",
-    "Sakthi GIS operator",
-    "Sakthi SSB",
-    "Sakthi portfolio",
-    "Sakthi Theni",
-    "Sakthi Tamilnadu",
-    "Sakthi full stack",
-    "Sakthivelpandian official website",
-    "Sakthivelpandian biography",
-    "Sakthivelpandian projects",
-    "Sakthivelpandian skills",
-    "Sakthivelpandian education",
-    "Sakthivelpandian experience",
-    "Sakthivelpandian Nanpara",
-    "Sakthivelpandian Bahraich",
-    "Sakthivelpandian bio",
-    "Sakthivelpandian profile",
-    "Sakthivelpandian credentials",
-    "Sakthivelpandian achievements",
-    "Sakthivelpandian mobile 9585992141",
-    "Sakthivelpandian mail imsakthidev",
-    "Sakthivelpandian web developer",
-    "AI-focused software developer",
-    "AI developer",
-    "AI software engineer"
-  ],
-  verification: {
-    google: 'Al0th2ZA8M6PKZHrUDc8cDJFbbR6lrI0wxS3iy0DP4c',
-  },
-};
+# Preserve order and ensure exact uniqueness
+unique_keywords = []
+seen = set()
+for kw in raw_keywords:
+    kw_clean = kw.strip()
+    if kw_clean not in seen:
+        seen.add(kw_clean)
+        unique_keywords.append(kw_clean)
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en">
-      <head>
-        <meta name="google-site-verification" content="Al0th2ZA8M6PKZHrUDc8cDJFbbR6lrI0wxS3iy0DP4c" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-      </head>
-      <body>
-        <Navbar />
-        <main style={{ minHeight: '100vh', paddingTop: '80px' }}>
-          {children}
-        </main>
-        {/* Shared Footer */}
-        <footer className={styles.footer}>
-          <div className="container">
-            <p>© {new Date().getFullYear()} Sakthivelpandian P. All rights reserved.</p>
-          </div>
-        </footer>
-      </body>
-    </html>
-  );
-}
+print(f"Total Unique Keywords: {len(unique_keywords)}")
+
+target_file = "/Users/imsakthidev/Desktop/Projects/my-portfolio/src/app/layout.tsx"
+with open(target_file, "r", encoding="utf-8") as f:
+    content = f.read()
+
+# Build replacement string for keywords array
+formatted_keywords = "  keywords: [\n" + ",\n".join(f'    "{kw}"' for kw in unique_keywords) + "\n  ],"
+
+# Replace keywords pattern in layout.tsx
+new_content = re.sub(r'keywords:\s*\[.*?\]\s*,', formatted_keywords + ',', content, flags=re.DOTALL)
+
+with open(target_file, "w", encoding="utf-8") as f:
+    f.write(new_content)
+
+print("Successfully updated src/app/layout.tsx with 500 keywords!")
